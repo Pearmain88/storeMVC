@@ -10,7 +10,7 @@ namespace Store.webMVC.Models
     {
         [Key]
         public int TransactionID { get; set; }
-
+        //quantity purchased 
         public int CustomerID { get; set; }
 
         public int ProductID { get; set; }

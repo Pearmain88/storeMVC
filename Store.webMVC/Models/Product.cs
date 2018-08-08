@@ -8,6 +8,7 @@ namespace Store.webMVC.Models
 {
     public class Product
     {
+        //new quantity (update quantity)
         [Key]
         public int ProductID { get; set; }
         public string ProductName { get; set; }

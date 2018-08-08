@@ -10,6 +10,7 @@ using Store.webMVC.Models;
 
 namespace Store.webMVC.Controllers
 {
+    //--somewhere in here -- product quantity - quantity purchased = update quantity
     [Authorize]
     public class ProductController : Controller
     {

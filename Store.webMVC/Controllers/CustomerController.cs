@@ -16,9 +16,27 @@ namespace Store.webMVC.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customer
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Customers.ToList());
+        //}
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Customers.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "lastName" : "";
+            ViewBag.DateSortParm = String.IsNullOrEmpty(sortOrder) ? "firstName" : "";
+            var students = from c in db.Customers
+                           select c;
+            switch (sortOrder)
+            {
+                case "lastName":
+                    students = students.OrderByDescending(c => c.LastName);
+                    break;
+                case "firstNme":
+                    students = students.OrderBy(c => c.FirstName);
+                    break;
+                
+            }
+            return View(students.ToList());
         }
 
         // GET: Customer/Details/5

@@ -22,3 +22,27 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.navbar {
+    background-color: rebeccapurple;
+    text-shadow: 2px 2px 2px darkslateblue; 
+}
+
+.navbar-header {
+    background-color: rebeccapurple;
+        
+}
+.navbar-nav {
+
+}
+
+.jumbotron {
+    background-color: darkslateblue;
+    color: paleturquoise;
+    text-shadow: 3px 3px 2px black;
+}
+.btn {
+    background-color: paleturquoise;
+    color: darkslateblue;
+    text-shadow: 1px 1px 0px black;
+}
